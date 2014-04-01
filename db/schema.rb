@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140401163140) do
+ActiveRecord::Schema.define(version: 20140401230504) do
+
+  create_table "lessons", force: true do |t|
+    t.integer  "student_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.date     "attended_on"
+    t.integer  "time_of_day"
+    t.boolean  "cancelled"
+    t.boolean  "late"
+    t.boolean  "reschedule"
+    t.integer  "room"
+  end
 
   create_table "students", force: true do |t|
     t.string  "first_name"
@@ -28,6 +40,12 @@ ActiveRecord::Schema.define(version: 20140401163140) do
     t.string  "image_url"
     t.boolean "active"
     t.string  "type"
+  end
+
+  create_table "studios", force: true do |t|
+    t.string "name"
+    t.string "address"
+    t.string "image_url"
   end
 
   create_table "users", force: true do |t|

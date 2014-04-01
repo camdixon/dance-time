@@ -8,6 +8,7 @@ class Lessons < ActiveRecord::Migration
       t.boolean :cancelled
       t.boolean :late
       t.boolean :reschedule
+      t.integer :room
     end
   end
 end
