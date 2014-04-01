@@ -1,0 +1,96 @@
+<div class="page-header">
+  <div class="row">
+    <h1 class="col-sm-8" style="margin-left: 10px"><%= link_to @user.name, edit_user_path(@user) %></h1>
+    <div class="col-sm-3">
+      <span style="margin-right: 20px"><%= link_to 'Logout', 'logout', class: 'btn btn-default pull-right' %></span>
+      <span style="margin-right: 20px"><%= link_to 'Profile', edit_user_path(@user), class: 'btn btn-default pull-right' %></span>
+      <span style="margin-right: 20px"><%= link_to 'Add a Student', new_student_path, class: 'btn btn-default pull-right' %></span>
+    </div>
+  </div>
+</div>
+
+<!-- Main Schedule -->
+<div class="row">
+  <div class="col-sm-3">
+    <span style="margin-right: 20px"><%= link_to 'Add', 'path_name', class: 'btn btn-default pull-left' %></span>
+    <span style="margin-right: 20px"><%= link_to 'Lesson', 'path_name', class: 'btn btn-default pull-left' %></span>
+    <span style="margin-right: 20px"><%= link_to 'Meeting', 'path_name', class: 'btn btn-default pull-left' %></span>
+    <span style="margin-right: 20px"><%= link_to 'Break', 'path_name', class: 'btn btn-default pull-left' %></span>
+  </div>
+</div>
+
+<div id="schedule-wrap">
+  <div class="col-sm-14">
+    <div class="row first-row">
+      <div class="col-sm-1 first-col">
+        <h4 class="bold text-center">Time</h4>
+      </div>
+      <div class="col-sm-1 monday">
+        <h4 class="bold text-center">Monday</h4>
+      </div>
+      <div class="col-sm-1 tuesday">
+        <h4 class="bold text-center">Tuesday</h4>
+      </div>
+      <div class="col-sm-1 wednesday">
+        <h4 class="bold text-center">Wednesday</h4>
+      </div>
+      <div class="col-sm-1 thursday">
+        <h4 class="bold text-center">Thursday</h4>
+      </div>
+      <div class="col-sm-1 friday">
+        <h4 class="bold text-center">Friday</h4>
+      </div>
+      <div class="col-sm-1 saturday">
+        <h4 class="bold text-center">Saturday</h4>
+      </div>
+      <div class="col-sm-1 sunday">
+        <h4 class="bold text-center">Sunday</h4>
+      </div>
+    </div>
+    <div class="row-time time-col offset-color">
+      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">10:00</h4></div>
+      <div class="col-sm-1 text-center element-height"><h5>Mary Bullhorn</h5></div>
+    </div>
+    <div class="row-time">
+      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">11:00</h4></div>
+    </div>
+    <div class="row-time offset-color">
+      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">12:00</h4></div>
+    </div>
+    <div class="row-time">
+      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">1:00</h4></div>
+    </div>
+    <div class="row-time offset-color">
+      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">2:00</h4></div>
+    </div>
+    <div class="row-time">
+      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">3:00</h4></div>
+    </div>
+    <div class="row-time offset-color">
+      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">4:00</h4></div>
+    </div>
+    <div class="row-time">
+      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">5:00</h4></div>
+    </div>
+    <div class="row-time offset-color">
+      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">6:00</h4></div>
+    </div>
+    <div class="row-time">
+      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">7:00</h4></div>
+    </div>
+    <div class="row-time offset-color">
+      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">8:00</h4></div>
+    </div>
+    <div class="row-time">
+      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">9:00</h4></div>
+    </div>
+    <div class="row-time last-row offset-color">
+      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">10:00</h4></div>
+    </div>
+    
+    
+  </div>
+</div>
+<div id="footer">
+</div>
+
