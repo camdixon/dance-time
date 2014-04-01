@@ -15,5 +15,6 @@ class Students < ActiveRecord::Migration
       t.string "image_url"
       t.boolean :active
       t.string "type"
+    end
   end
 end
