@@ -1,4 +1,4 @@
-DanceTime::Application.routes.draw do
+NkuProject::Application.routes.draw do
   get "welcome/index"
   get 'login', to: 'sessions#new', as: 'login'
   post 'login', to: 'sessions#create'
