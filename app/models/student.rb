@@ -1,4 +1,6 @@
 class Student < ActiveRecord::Base
+  has_many :lessons
+  
   def avatar
     Avatar.from_student(self)
   end
