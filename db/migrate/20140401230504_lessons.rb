@@ -2,6 +2,7 @@ class Lessons < ActiveRecord::Migration
   def change
     create_table :lessons do |t|
       t.references :student
+      t.references :user
       t.timestamps
       t.date :scheduled_on
       t.integer :time_of_day
