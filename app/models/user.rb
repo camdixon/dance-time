@@ -28,4 +28,9 @@ class User < ActiveRecord::Base
   def self.is_owner(id)
   end
   
+  def self.has_lesson(day, time)
+    joins(:lessons).where(lessons: {day: day, time_of_day: time, user_id: self.id})
+    return :student_id
+  end
+  
 end
