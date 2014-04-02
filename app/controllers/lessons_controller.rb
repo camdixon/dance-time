@@ -1,15 +1,14 @@
 class LessonsController < ApplicationController
-  
   def new
     @lesson = Lesson.new
   end
 
   def create
     @lesson = current_user.lessons.build(lesson_params)
-    @lesson.attended_on = Date.today
+    #@lesson.scheduled_on = Date.today
 
-    if @attendance.save
-      redirect_to users_path, notice: "You've scheduled a lesson."
+    if @lesson.save
+      redirect_to users_path, notice: "You scheduled a lesson."
     else
       render :new
     end

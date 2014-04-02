@@ -13,3 +13,4 @@ The schedule will list our 10-12 hours the studio is open 10am - 10pm.
 3. Add new students that I teach
 4. Schedule a planned lesson for the current week
 5. View students I have scheduled for this wek
+6. If I have an active session (logged in) and go to the homepage, redirect me to my schedule.

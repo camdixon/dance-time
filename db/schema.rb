@@ -17,12 +17,13 @@ ActiveRecord::Schema.define(version: 20140401230504) do
     t.integer  "student_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.date     "attended_on"
+    t.date     "scheduled_on"
     t.integer  "time_of_day"
     t.boolean  "cancelled"
     t.boolean  "late"
     t.boolean  "reschedule"
     t.integer  "room"
+    t.string   "day"
   end
 
   create_table "students", force: true do |t|
