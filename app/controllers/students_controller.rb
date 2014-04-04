@@ -9,7 +9,7 @@ class StudentsController < ApplicationController
   end
   
   def index
-    @student = User.find(params[:student_id])
+    @students = Student.all
   end
   
   def edit
