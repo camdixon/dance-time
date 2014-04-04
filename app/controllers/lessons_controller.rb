@@ -4,7 +4,7 @@ class LessonsController < ApplicationController
   end
 
   def create
-    @lesson = current_user.lessons.build(lesson_params)
+    @lesson = Lesson.new(lesson_params)
     #@lesson.scheduled_on = Date.today
 
     if @lesson.save

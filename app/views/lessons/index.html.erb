@@ -14,8 +14,8 @@
   <table class="table assignment-table">
     <thead>
       <tr>
-        <th>Student ID</th>
-        <th>Teacher ID</th>
+        <th>Teacher Name</th>
+        <th>Student Name</th>
         <th>Time</th>
         <th>Day</th>
       </tr>
@@ -24,8 +24,8 @@
     <tbody>
       <% @lessons.each do |lesson| %>
         <tr id="<%= dom_id(lesson) %>">
-          <td><%= lesson.student_id %></td>
-          <td><%= lesson.user_id %></td>
+          <td><%= lesson.user.name %></td>
+          <td><%= lesson.student.full_name %></td>
           <td><%= lesson.time_of_day %></td>
           <td><%= lesson.day %></td>
         </tr>
