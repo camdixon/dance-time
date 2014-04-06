@@ -27,7 +27,13 @@
           <td><%= lesson.user.name %></td>
           <td><%= lesson.student.full_name %></td>
           <td><%= lesson.time_of_day %></td>
-          <td><%= lesson.day %></td>
+          <td>
+            <% if lesson.scheduled_on %>
+            <%= lesson.scheduled_on %>
+            <% else %>
+            <%= lesson.day %>
+            <% end %>
+          </td>
         </tr>
       <% end %>
     </tbody>

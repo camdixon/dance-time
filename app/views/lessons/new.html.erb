@@ -29,7 +29,7 @@
     <div class="form-group">
       <%= f.label 'Select Student' %>
       <%= f.collection_select :student_id, Student.all, :id, :full_name, {}, {class: 'form-control'} %>
-    </div>
+    </div> 
   
     <div class="form-group">
       <%= f.label 'Lesson time?' %>
@@ -39,6 +39,11 @@
     <div class="form-group">
       <%= f.label 'What day?' %>
       <%= f.text_field :day, class: 'form-control' %>
+    </div>
+  
+    <div class="form-group">
+      <%= f.label 'Date' %>
+      <%= f.date_field :scheduled_on, class: "form-control" %>
     </div>
 
     <%= f.submit "Schedule Lesson", class: 'btn btn-primary' %>
