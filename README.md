@@ -16,3 +16,4 @@ The schedule will list our 10-12 hours the studio is open 10am - 10pm.
 6. As a teacher, I can schedule a lesson with my students and fellow teachers (Noted as exchange lessons in the field, but not yet in software scope this week).
 7. I can view all lessons that are active this week via the "All Lessons button"
 8. If I have an active session (logged in) and go to the homepage, redirect me to my schedule view of the week.
+9. Having active dates on the calendar is not supported this week.  In order to put the lessons actually on the calendar that will need to be implemented next week.
