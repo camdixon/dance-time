@@ -5,11 +5,13 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create!(user_params)
-    redirect_to users_path, notice: "Successfully created #{@user.name}"
+    redirect_to new_session_path, notice: "Successfully created #{@user.name}, You can now login to your account!"
   end
   
   def index
     @user = User.find(session[:user_id])
+    @viewDate = Date.today
+    @weekStart = @viewDate.beginning_of_week(start_day = :monday)
   end
   
   def edit

@@ -8,81 +8,84 @@
       <span><%= link_to 'All Students', students_path, class: 'btn btn-default pull-right' %></span>
       <span><%= link_to 'All Lessons', lessons_path, class: 'btn btn-default pull-right' %></span>
     </div>
+    <div class="col-sm-4" style="margin: 0 0 0 10px; clear: left;">
+      <div class="btn-group">  
+        <span style="margin-right: 20px"><%= link_to 'Add', 'path_name', class: 'btn btn-default pull-left' %></span>
+        <span style="margin-right: 20px"><%= link_to 'Lesson', new_lesson_path, class: 'btn btn-default pull-left' %></span>
+        <span style="margin-right: 20px"><%= link_to 'Meeting', 'path_name', class: 'btn btn-default pull-left' %></span>
+        <span style="margin-right: 20px"><%= link_to 'Break', 'path_name', class: 'btn btn-default pull-left' %></span>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- Main Schedule -->
-<div class="row">
-  <div class="col-sm-4">
-    <span style="margin-right: 20px"><%= link_to 'Add', 'path_name', class: 'btn btn-default pull-left' %></span>
-    <span style="margin-right: 20px"><%= link_to 'Lesson', new_lesson_path, class: 'btn btn-default pull-left' %></span>
-    <span style="margin-right: 20px"><%= link_to 'Meeting', 'path_name', class: 'btn btn-default pull-left' %></span>
-    <span style="margin-right: 20px"><%= link_to 'Break', 'path_name', class: 'btn btn-default pull-left' %></span>
-  </div>
+<div class="row" style="margin-left: 28px; margin-bottom: -12px;">
+  <h3 class="month-arrow">></h3>
 </div>
 
 <div id="schedule-wrap">
   <div class="col-sm-14">
     <div class="row first-row">
       <div class="col-sm-1 first-col">
-        <h4 class="bold text-center">Time</h4>
+        <h5 class="bold text-center"><%= @weekStart.strftime("%B") %></h5>
       </div>
       <div class="col-sm-1 monday">
-        <h4 class="bold text-center">Monday</h4>
+        <h5 class="bold text-center"><%= (@weekStart).strftime("%A %d") %></h5>
       </div>
       <div class="col-sm-1 tuesday">
-        <h4 class="bold text-center">Tuesday</h4>
+        <h5 class="bold text-center"><%= (@weekStart+1.days).strftime("%A %d") %></h5>
       </div>
       <div class="col-sm-1 wednesday">
-        <h4 class="bold text-center">Wednesday</h4>
+        <h5 class="bold text-center"><%= (@weekStart+2.days).strftime("%A %d") %></h5>
       </div>
       <div class="col-sm-1 thursday">
-        <h4 class="bold text-center">Thursday</h4>
+        <h5 class="bold text-center"><%= (@weekStart+3.days).strftime("%A %d") %></h5>
       </div>
       <div class="col-sm-1 friday">
-        <h4 class="bold text-center">Friday</h4>
+        <h5 class="bold text-center"><%= (@weekStart+4.days).strftime("%A %d") %></h5>
       </div>
       <div class="col-sm-1 saturday">
-        <h4 class="bold text-center">Saturday</h4>
+        <h5 class="bold text-center"><%= (@weekStart+5.days).strftime("%A %d") %></h5>
       </div>
       <div class="col-sm-1 sunday">
-        <h4 class="bold text-center">Sunday</h4>
+        <h5 class="bold text-center"><%= (@weekStart+6.days).strftime("%A %d") %></h5>
       </div>
     </div>
     <div class="row-time offset-color">
-      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">12:00</h4></div>
+      <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">12:00</h5></div>
       <div class="col-sm-1 text-center element-height event-on-calendar">
       </div>
     </div>
     <div class="row-time">
-      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">1:00</h4></div>
+      <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">1:00</h5></div>
     </div>
     <div class="row-time offset-color">
-      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">2:00</h4></div>
+      <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">2:00</h5></div>
     </div>
     <div class="row-time">
-      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">3:00</h4></div>
+      <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">3:00</h5></div>
     </div>
     <div class="row-time offset-color">
-      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">4:00</h4></div>
+      <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">4:00</h5></div>
     </div>
     <div class="row-time">
-      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">5:00</h4></div>
+      <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">5:00</h5></div>
     </div>
     <div class="row-time offset-color">
-      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">6:00</h4></div>
+      <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">6:00</h5></div>
     </div>
     <div class="row-time">
-      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">7:00</h4></div>
+      <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">7:00</h5></div>
     </div>
     <div class="row-time offset-color">
-      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">8:00</h4></div>
+      <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">8:00</h5></div>
     </div>
     <div class="row-time">
-      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">9:00</h4></div>
+      <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">9:00</h5></div>
     </div>
     <div class="row-time last-row offset-color">
-      <div class="col-sm-1 first-col time-col text-center element-height"><h4 class="bold">10:00</h4></div>
+      <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">10:00</h5></div>
     </div>
     
     
