@@ -17,3 +17,25 @@ The schedule will list our 10-12 hours the studio is open 10am - 10pm.
 7. I can view all lessons that are active this week via the "All Lessons button"
 8. If I have an active session (logged in) and go to the homepage, redirect me to my schedule view of the week.
 9. Having active dates on the calendar is not supported this week.  In order to put the lessons actually on the calendar that will need to be implemented next week.
+
+Assignment 4/11
+
+```
+As a dance teacher
+I want to be able to be a part of a studio
+So that my students can also belong to that studio
+```
+
+1. Under my teacher profile I will see my studio's information.
+2. I will see the name, address, and other basic information
+3. My students will also be associated with my studio.
+
+```
+As a dance teacher
+I want to be able to schedule student lessons with other teachers in my studio (exchange lessons)
+So that I can go on vacation
+```
+
+1. I can schedule a lesson with another teacher on my app.
+2. The teacher must also be a teacher in the same studio I belong to.
+3. The student must also belong to that studio.
