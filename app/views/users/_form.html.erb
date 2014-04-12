@@ -21,7 +21,7 @@
     </div>
 
     <div class="form-group">
-      <%= f.label 'Your Studio' %>
+      <%= f.label 'Select Your Studio' %> &nbsp;or <%= link_to 'Add Your Studio', new_studio_path %>
       <%= f.collection_select :studio_id, Studio.all, :id, :name, {}, {class: 'form-control'} %>
     </div>
   

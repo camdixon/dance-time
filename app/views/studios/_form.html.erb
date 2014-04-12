@@ -6,10 +6,25 @@
     </div>
   
     <div class="form-group">
-      <%= f.label :address %>
-      <%= f.text_field :address, class: 'form-control' %>
+      <%= f.label :street %>
+      <%= f.text_field :street, class: 'form-control' %>
+    </div>
+    
+    <div class="form-group">
+      <%= f.label :city %>
+      <%= f.text_field :city, class: 'form-control' %>
     </div>
   
+    <div class="form-group">
+      <%= f.label :state %>
+      <%= f.text_field :state, class: 'form-control' %>
+    </div>
+  
+    <div class="form-group">
+      <%= f.label :zip %>
+      <%= f.text_field :zip, class: 'form-control' %>
+    </div>
+
     <div class="form-group">
       <%= f.label :image_url %>
       <%= f.text_field :image_url, class: 'form-control' %>

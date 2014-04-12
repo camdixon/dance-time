@@ -10,6 +10,11 @@ class UsersController < ApplicationController
   
   def index
     @user = User.find(session[:user_id])
+    if @user == current_user
+      render :index
+    else
+      redirect_to new_session_path, notice: "You need to login first to view schedules."
+    end
   end
   
   def edit
