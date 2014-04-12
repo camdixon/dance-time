@@ -1,0 +1,13 @@
+<div class="page-header">
+  <div class="row">
+    <h1 class="col-sm-4" style="margin-left: 10px"><%= link_to @user.name, edit_user_path(@user) %></h1>
+    <div class="btn-group pull-right" style="margin-right: 100px;">
+      <span><%= link_to 'Logout', 'logout', class: 'btn btn-default pull-right' %></span>
+      <span><%= link_to 'Profile', edit_user_path(@user), class: 'btn btn-default pull-right' %></span>
+      <span><%= link_to 'Schedule', users_path, class: 'btn btn-default pull-right' %></span>
+      <span><%= link_to 'Add a Student', new_student_path, class: 'btn btn-default pull-right' %></span>
+      <span><%= link_to 'All Students', students_path, class: 'btn btn-default pull-right' %></span>
+      <span><%= link_to 'All Lessons', lessons_path, class: 'btn btn-default pull-right' %></span>
+    </div>
+  </div>
+</div>
