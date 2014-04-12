@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :lessons
+  belongs_to :studios
   
   def avatar
     Avatar.from_user(self)

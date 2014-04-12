@@ -11,6 +11,7 @@ NkuProject::Application.routes.draw do
   resources :sessions
   resources :students
   resources :lessons
+  resources :studios
   
   # You can have the root of your site routed with "root"
   root 'welcome#index'

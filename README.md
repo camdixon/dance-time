@@ -39,3 +39,5 @@ So that I can go on vacation
 1. I can schedule a lesson with another teacher on my app.
 2. The teacher must also be a teacher in the same studio I belong to.
 3. The student must also belong to that studio.
+
+Assignment 4/18
