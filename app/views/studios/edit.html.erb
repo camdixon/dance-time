@@ -1,10 +1,10 @@
 <div class="page-header">
   <div class="row">
-    <h1 class="col-sm-8" style="margin-left: 10px"><%= link_to @user.name, edit_user_path(@user) %></h1>
+    <h1 class="col-sm-8" style="margin-left: 10px"><%= link_to current_user.name, edit_user_path(current_user) %></h1>
     <div class="col-sm-3">
       <span style="margin-right: 20px"><%= link_to 'Logout', 'logout', class: 'btn btn-default pull-right' %></span>
       <span style="margin-right: 20px"><%= link_to 'Home', users_path, class: 'btn btn-default pull-right' %></span>
-      <span style="margin-right: 20px"><%= link_to 'My Studio', studios_path, class: 'btn btn-default pull-right' %></span>
+      <span style="margin-right: 20px"><%= link_to 'Profile', edit_user_path(current_user), class: 'btn btn-default pull-right' %></span>
     </div>
   </div>
 </div>

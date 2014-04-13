@@ -25,6 +25,11 @@ class UsersController < ApplicationController
       redirect_to users_path, notice: "You do not have permission to edit #{@user.name}'s profile."
     end
   end
+  
+  def update
+    current_user.update_attributes!(user_params)
+    redirect_to users_path, notice: "Successfully updated your profile"
+  end
 
   private
 

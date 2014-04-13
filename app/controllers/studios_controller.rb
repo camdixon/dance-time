@@ -9,6 +9,7 @@ class StudiosController < ApplicationController
   end
   
   def index
+    @studio = Studio.find(current_user.studio_id)
   end
   
   private
