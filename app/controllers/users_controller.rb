@@ -9,14 +9,14 @@ class UsersController < ApplicationController
   end
   
   def index
+    @viewDate = Date.today
+    @weekStart = @viewDate.beginning_of_week(start_day = :monday)
     @user = User.find(session[:user_id])
     if @user == current_user
       render :index
     else
       redirect_to new_session_path, notice: "You need to login first to view schedules."
     end
-    @viewDate = Date.today
-    @weekStart = @viewDate.beginning_of_week(start_day = :monday)
   end
   
   def edit
