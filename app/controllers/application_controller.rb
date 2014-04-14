@@ -14,5 +14,16 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
   
+  def week_ahead
+    @viewDate = @viewDate + 7.days
+    @weekStart = @viewDate.beginning_of_week(start_day = :monday)
+  end
+  helper_method :week_ahead
   
+  def week_back
+    @viewDate = @viewDate - 7.days
+    @weekStart = @viewDate.beginning_of_week(start_day = :monday)
+  end
+  helper_method :week_back
+
 end

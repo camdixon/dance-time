@@ -17,7 +17,7 @@
         <th>Teacher Name</th>
         <th>Student Name</th>
         <th>Time</th>
-        <th>Day</th>
+        <th>Date</th>
       </tr>
     </thead>
   
@@ -26,8 +26,14 @@
         <tr id="<%= dom_id(lesson) %>">
           <td><%= lesson.user.name %></td>
           <td><%= lesson.student.full_name %></td>
-          <td><%= lesson.time_of_day %></td>
-          <td><%= lesson.day %></td>
+          <td><%= lesson.time_of_day.strftime("%I:%M %p") %></td>
+          <td>
+            <% if lesson.scheduled_on %>
+            <%= lesson.scheduled_on %>
+            <% else %>
+            <%= lesson.day %>
+            <% end %>
+          </td>
         </tr>
       <% end %>
     </tbody>
