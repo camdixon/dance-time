@@ -23,8 +23,7 @@
   
     <div class="form-group">
       <%= f.label 'Select Teacher' %>
-      <%= #f.collection_select :user_id, User.find(User.studio_id == current_user.studio_id), :id, :name, {}, {class: 'form-control'} %>
-      <%= f.collection_select :user_id, User.find(current_user.studio_teachers()), :id, :name, {}, {class: 'form-control'} %>
+      <%= f.collection_select :user_id, User.find(current_studio.users.id), :id, :name, {}, {class: 'form-control'} %>
     </div>
   
     <div class="form-group">

@@ -35,8 +35,4 @@ class User < ActiveRecord::Base
     return :student_id
   end
   
-  def self.studio_teachers()
-    joins(:studios).where(studios: {id: current_user.studio_id})
-  end
-  
 end

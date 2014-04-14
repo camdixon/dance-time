@@ -4,4 +4,9 @@ class Studio < ActiveRecord::Base
     
   validates_presence_of :name, :on => :create
   
+  def self.studio_teachers()
+    #joins(:studios).where(studios: {id: current_user.studio_id})
+    current_studio.users
+  end
+  
 end

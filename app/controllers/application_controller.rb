@@ -6,13 +6,22 @@ class ApplicationController < ActionController::Base
   private
 
   def current_user
-    if session[:user_id]
+    if session[:user_id].present?
       @current_user ||= User.find(session[:user_id])
     else
       @current_user = nil
     end
   end
   helper_method :current_user
+  
+  def current_studio
+    if @current_user.present?
+      @current_studio ||= Studio.find(current_user.studio_id)
+    else
+      @current_studio = nil
+    end
+  end
+  helper_method :current_studio
   
   def week_ahead
     @viewDate = @viewDate + 7.days
