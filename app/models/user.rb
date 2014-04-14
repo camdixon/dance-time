@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_many :lessons
-  belongs_to :studios
+  belongs_to :studio
   
   def avatar
     Avatar.from_user(self)
@@ -32,6 +32,10 @@ class User < ActiveRecord::Base
   def self.has_lesson(day, time)
     joins(:lessons).where(lessons: {day: day, time_of_day: time, user_id: self.id})
     return :student_id
+  end
+  
+  def self.studio_teachers()
+    joins(:studios).where(studios: {id: current_user.studio_id})
   end
   
 end

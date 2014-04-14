@@ -6,7 +6,6 @@ class LessonsController < ApplicationController
   def create
     @lesson = Lesson.new(lesson_params)
     @current_date = params[:date] || Date.today
-    #@lesson.scheduled_on = Date.today
 
     if @lesson.save
       redirect_to users_path, notice: "You scheduled a lesson."
