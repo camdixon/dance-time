@@ -8,7 +8,8 @@
   margin: 40px 60px
   
 .schedule-wrap
-  margin: 0 40px
+  margin: 0 80px
+  width: 960px
   
 .first-col
   border-left: 1px solid #bbb
@@ -21,9 +22,9 @@
 .month-arrow
   display: inline-block
   width: 22px
-  margin-right: 30px
+  margin-right: 8px
   margin-bottom: 10px
-  margin-left: -8px
+  margin-left: 50px
 
 .first-row
   border-top: solid 1px #bbb
@@ -70,3 +71,36 @@
     
 #footer
   height: 110px
+  
+// Reinvent the schedule page to go by columns and column widths first (moble design)
+// then put rows inside of the columns.
+//
+// This will be easier to query lessons by day,
+// and is better way to build a bootsrap app.
+
+@grid-columns:              8
+@grid-gutter-width:         30px
+@grid-float-breakpoint:     768px
+@screen-sm-min:             768px
+
+// Creates a wrapper for a series of columns
+//.make-row(@gutter: @grid-gutter-width) {
+  // Then clear the floated columns
+//  .clearfix()
+//}
+    
+// Generate the small columns
+.col-sm-1-schedule
+  position: relative
+  // Prevent columns from collapsing when empty
+  min-height: 1px
+  // Inner gutter via padding
+  padding-left: 8px
+  padding-right: 8px
+  border-right: 1px solid #bbb
+
+  // Calculate width based on number of columns available
+  float: left
+  width: 12.5%
+  //width: percentage((@columns / @grid-columns))
+  

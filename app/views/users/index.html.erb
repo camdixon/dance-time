@@ -24,70 +24,72 @@
   <h3 class="month-arrow"><%= link_to "<", users_path(week: @weekStart - 1.week) %></h3>
   <h3 class="month-arrow"><%= link_to ">", users_path(week: @weekStart + 1.week) %></h3>
 </div>
-<div class="col-sm-14 schedule-wrap">
+<div class="schedule-wrap">
   <div class="row first-row">
-    <div class="col-sm-1 first-col">
+    <div class="col-sm-1-schedule first-col">
       <h5 class="bold text-center"><%= (@weekStart).strftime("%B") %></h5>
     </div>
-    <div class="col-sm-1 monday">
+    <div class="col-sm-1-schedule monday">
       <h5 class="bold text-center"><%= (@weekStart).strftime("%A %d") %></h5>
     </div>
-    <div class="col-sm-1 tuesday">
+    <div class="col-sm-1-schedule tuesday">
       <h5 class="bold text-center"><%= (@weekStart+1.days).strftime("%A %d") %></h5>
     </div>
-    <div class="col-sm-1 wednesday">
+    <div class="col-sm-1-schedule wednesday">
       <h5 class="bold text-center"><%= (@weekStart+2.days).strftime("%A %d") %></h5>
     </div>
-    <div class="col-sm-1 thursday">
+    <div class="col-sm-1-schedule thursday">
       <h5 class="bold text-center"><%= (@weekStart+3.days).strftime("%A %d") %></h5>
     </div>
-    <div class="col-sm-1 friday">
+    <div class="col-sm-1-schedule friday">
       <h5 class="bold text-center"><%= (@weekStart+4.days).strftime("%A %d") %></h5>
     </div>
-    <div class="col-sm-1 saturday">
+    <div class="col-sm-1-schedule saturday">
       <h5 class="bold text-center"><%= (@weekStart+5.days).strftime("%A %d") %></h5>
     </div>
-    <div class="col-sm-1 sunday">
+    <div class="col-sm-1-schedule sunday">
       <h5 class="bold text-center"><%= (@weekStart+6.days).strftime("%A %d") %></h5>
     </div>
   </div>
   <div class="row-time offset-color">
-    <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">12:00</h5></div>
-    <div class="col-sm-1 text-center element-height event-on-calendar">
+    <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">12:00</h5></div>
+    <div class="col-sm-1-schedule text-center element-height event-on-calendar">
     </div>
   </div>
   <div class="row-time">
-    <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">1:00</h5></div>
+    <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">1:00</h5></div>
   </div>
   <div class="row-time offset-color">
-    <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">2:00</h5></div>
+    <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">2:00</h5></div>
   </div>
   <div class="row-time">
-    <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">3:00</h5></div>
+    <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">3:00</h5></div>
   </div>
   <div class="row-time offset-color">
-    <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">4:00</h5></div>
+    <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">4:00</h5></div>
   </div>
   <div class="row-time">
-    <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">5:00</h5></div>
+    <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">5:00</h5></div>
   </div>
   <div class="row-time offset-color">
-    <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">6:00</h5></div>
+    <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">6:00</h5></div>
   </div>
   <div class="row-time">
-    <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">7:00</h5></div>
+    <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">7:00</h5></div>
   </div>
   <div class="row-time offset-color">
-    <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">8:00</h5></div>
+    <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">8:00</h5></div>
   </div>
   <div class="row-time">
-    <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">9:00</h5></div>
+    <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">9:00</h5></div>
   </div>
   <div class="row-time last-row offset-color">
-    <div class="col-sm-1 first-col time-col text-center element-height"><h5 class="bold">10:00</h5></div>
+    <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">10:00</h5></div>
   </div>
   
 </div>
+
+
 <div id="footer">
 </div>
 
