@@ -21,10 +21,9 @@
 
 <!-- Main Schedule -->
 <div class="row" style="margin-left: 28px; margin-bottom: -12px;">
-  <h3 class="month-arrow">></h3>
+  <h3 class="month-arrow"><%= link_to "<", users_path(week: @weekStart - 1.week) %></h3>
+  <h3 class="month-arrow"><%= link_to ">", users_path(week: @weekStart + 1.week) %></h3>
 </div>
-<% current_user.studio %>
-
 <div id="schedule-wrap">
   <div class="col-sm-14">
     <div class="row first-row">

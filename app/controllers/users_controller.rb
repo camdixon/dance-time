@@ -9,7 +9,11 @@ class UsersController < ApplicationController
   end
   
   def index
-    @viewDate = Date.today
+    if params[:week]
+      @viewDate = Date.parse(params[:week])
+    else
+      @viewDate = Date.today  
+    end
     @weekStart = @viewDate.beginning_of_week(start_day = :monday)
     @user = User.find(session[:user_id])
     if @user == current_user

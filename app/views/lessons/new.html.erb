@@ -23,13 +23,13 @@
   
     <div class="form-group">
       <%= f.label 'Select Teacher' %>
-      <%= f.collection_select :user_id, User.find(current_studio.users.id), :id, :name, {}, {class: 'form-control'} %>
+      <%= f.collection_select :user_id, current_studio.users, :id, :name, {}, {class: 'form-control'} %>
     </div>
   
     <div class="form-group">
       <%= f.label 'Select Student' %>
-      <%= f.collection_select :student_id, Student.all, :id, :full_name, {}, {class: 'form-control'} %>
-    </div> 
+      <%= f.collection_select :student_id, current_studio.students, :id, :full_name, {}, {class: 'form-control'} %>
+    </div>
   
     <div class="form-group">
       <%= f.label 'Lesson time?' %>

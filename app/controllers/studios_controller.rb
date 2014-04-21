@@ -4,8 +4,13 @@ class StudiosController < ApplicationController
   end
 
   def create
-    @studio = Studio.create!(studio_params)
-    redirect_to users_path, notice: "Successfully created #{@studio.name}"
+    @studio = Studio.new(studio_params)
+
+    if @studio.save
+      redirect_to new_user_path, notice: "You added your studio to the available list."
+    else
+      render :new
+    end
   end
   
   def index
