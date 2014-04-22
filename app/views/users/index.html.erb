@@ -53,8 +53,14 @@
   </div>
   <div class="row-time offset-color">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">12:00</h5></div>
-    <div class="col-sm-1-schedule text-center element-height event-on-calendar">
-    </div>
+    
+    <% @days_from_this_week.each do |day| %>
+      <div class="col-sm-1-schedule text-center element-height lesson-block">
+        <%= @user.has_lesson(day, 12) %>
+        <%= day %>
+      </div>
+    <% end %>
+    
   </div>
   <div class="row-time">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">1:00</h5></div>

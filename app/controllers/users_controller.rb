@@ -15,6 +15,7 @@ class UsersController < ApplicationController
       @viewDate = Date.today  
     end
     @weekStart = @viewDate.beginning_of_week(start_day = :monday)
+    @days_from_this_week = (@viewDate.at_beginning_of_week..@viewDate.at_end_of_week).map
     @user = User.find(session[:user_id])
     if @user == current_user
       render :index
