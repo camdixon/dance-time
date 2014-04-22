@@ -22,10 +22,9 @@
     </thead>
   
     <tbody>
-      <% @lessons.each do |lesson| %>
+      <% current_studio.lessons.each do |lesson| %>
         <tr id="<%= dom_id(lesson) %>">
           <td><%= lesson.user.name %></td>
-          <%= debugger %>
           <td><%= lesson.student :full_name %></td>
           <td><%= lesson.time_of_day.strftime("%I:%M %p") %></td>
           <td>
