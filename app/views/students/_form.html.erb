@@ -44,6 +44,8 @@
       <%= f.label :image_url, 'Image URL' %>
       <%= f.text_field :image_url, class: 'form-control' %>
     </div>
+  
+    <%= f.hidden_field :studio_id, :value => current_studio.id %>
 
     <%= f.submit submit_copy, class: 'btn btn-primary' %>
     &nbsp;or
