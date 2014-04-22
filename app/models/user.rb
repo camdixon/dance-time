@@ -30,9 +30,9 @@ class User < ActiveRecord::Base
   def self.is_owner(id)
   end
   
-  def has_lesson(day, time)
-    User.joins(:lessons).where(lessons: {day: day, time_of_day: time, user_id: self.id})
-    return :student_id
+  def has_lesson(day, time) #see Time class to debug
+    db_time = Time.at(time.hour) 
+    User.joins(:lessons).where(lessons: {scheduled_on: day, time_of_day: db_time})
   end
   
 end
