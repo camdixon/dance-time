@@ -1,6 +1,7 @@
 class Studio < ActiveRecord::Base
   has_many :users
   has_many :students
+  has_many :lessons, through: :students
     
   validates_presence_of :name, :on => :create
   validates_uniqueness_of :name, :on => :create

@@ -22,20 +22,20 @@
     </thead>
   
     <tbody>
-      <% current_studio.lessons.each do |lesson| %>
-        <tr id="<%= dom_id(lesson) %>">
-          <td><%= lesson.user.name %></td>
-          <td><%= lesson.student :full_name %></td>
-          <td><%= lesson.time_of_day.strftime("%I:%M %p") %></td>
-          <td>
-            <% if lesson.scheduled_on %>
-            <%= lesson.scheduled_on %>
-            <% else %>
-            <%= lesson.day %>
-            <% end %>
-          </td>
-        </tr>
-      <% end %>
+        <% current_studio.lessons.each do |lesson| %>
+          <tr id="<%= dom_id(lesson) %>">
+            <td><%= lesson.user.name %></td>
+            <td><%= lesson.student.full_name %></td>
+            <td><%= lesson.time_of_day.strftime("%I:%M %p") %></td>
+            <td>
+              <% if lesson.scheduled_on %>
+              <%= lesson.scheduled_on %>
+              <% else %>
+              <%= lesson.day %>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
     </tbody>
   </table>
 </div>
