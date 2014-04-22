@@ -22,7 +22,7 @@
     </thead>
   
     <tbody>
-      <% @students.each do |student| %>
+      <% current_studio.students.each do |student| %>
         <tr id="<%= dom_id(student) %>">
           <td><%= student.id %></td>
           <td><%= student.first_name %></td>
