@@ -11,20 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140418201740) do
+ActiveRecord::Schema.define(version: 20140425205327) do
 
   create_table "lessons", force: true do |t|
     t.integer  "student_id"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.date     "scheduled_on"
-    t.time     "time_of_day"
     t.boolean  "cancelled"
     t.boolean  "late"
     t.boolean  "reschedule"
     t.integer  "room"
     t.string   "day"
+    t.datetime "start_time"
+    t.datetime "end_time"
   end
 
   create_table "students", force: true do |t|

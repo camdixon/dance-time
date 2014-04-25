@@ -35,4 +35,8 @@ class User < ActiveRecord::Base
     User.joins(:lessons).where(lessons: {scheduled_on: day, time_of_day: db_time})
   end
   
+  def lessons_at(datetime)
+    lessons.where('start_time < ? AND end_time > ?', datetime, datetime)
+  end
+  
 end
