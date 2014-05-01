@@ -41,3 +41,17 @@ So that I can go on vacation
 3. The student must also belong to that studio.
 
 Assignment 4/18
+
+
+```
+As a dance teacher
+I want to be able to click on a student's lesson / name, and show lesson and be able to edit the lesson
+So that I can easily reschedule the lesson.
+```
+
+1. I can move a lesson to a different day
+2. I can move the lesson to a different time
+3. I can move the lesson to another teacher
+4. If the lesson is cancelled, I want the lesson to "show" in a different color on the lesson block that it was located at.  This will show as a different color unless a new active lesson is scheduled over this time block on the schedule.
+
+Assignment 25
