@@ -54,123 +54,166 @@
   <div class="row-time offset-color">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">12:00</h5></div>    
     <% @days_from_this_week.each do |day| %>
-      <div class="col-sm-1-schedule text-center element-height lesson-block">
-        <% #strftime(year, month, month-day, hours, minutes) %>
-        <% datetime = DateTime.new( day.year,  day.month, day.day, 12, 00 )%>
+      <% datetime = DateTime.new( day.year,  day.month, day.day, 12, 00 )%>
+      <% if @user.lessons_at(datetime).exists? %>
         <% @user.lessons_at(datetime).each do |lesson| %>
-         <%= lesson.student.full_name %>
+          <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
+            <%= lesson.student.full_name %>
+          </div>
         <% end %>
-      </div>
+      <% else %>
+        <div class="col-sm-1-schedule text-center element-height lesson-block"></div>
+      <% end %>
     <% end %>
   </div>
   <div class="row-time">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">1:00</h5></div>
     <% @days_from_this_week.each do |day| %>
-      <div class="col-sm-1-schedule text-center element-height lesson-block">
-        <% datetime = DateTime.new( day.year,  day.month, day.day, 13, 00 )%>
+      <% datetime = DateTime.new( day.year,  day.month, day.day, 13, 00 )%>
+      <% if @user.lessons_at(datetime).exists? %>
         <% @user.lessons_at(datetime).each do |lesson| %>
-         <%= lesson.student.full_name %>
+          <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
+            <%= lesson.student.full_name %>
+          </div>
         <% end %>
-      </div>
+      <% else %>
+        <div class="col-sm-1-schedule text-center element-height lesson-block"></div>
+      <% end %>
     <% end %>
   </div>
   <div class="row-time offset-color">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">2:00</h5></div>
     <% @days_from_this_week.each do |day| %>
-      <div class="col-sm-1-schedule text-center element-height lesson-block">
-        <% datetime = DateTime.new( day.year,  day.month, day.day, 14, 00 )%>
+      <% datetime = DateTime.new( day.year,  day.month, day.day, 14, 00 )%>
+      <% if @user.lessons_at(datetime).exists? %>
         <% @user.lessons_at(datetime).each do |lesson| %>
-         <%= lesson.student.full_name %>
+          <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
+            <%= lesson.student.full_name %>
+          </div>
         <% end %>
-      </div>
+      <% else %>
+        <div class="col-sm-1-schedule text-center element-height lesson-block"></div>
+      <% end %>
     <% end %>
   </div>
   <div class="row-time">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">3:00</h5></div>
     <% @days_from_this_week.each do |day| %>
-      <div class="col-sm-1-schedule text-center element-height lesson-block">
-        <% datetime = DateTime.new( day.year,  day.month, day.day, 15, 00 )%>
+      <% datetime = DateTime.new( day.year,  day.month, day.day, 15, 00 )%>
+      <% if @user.lessons_at(datetime).exists? %>
         <% @user.lessons_at(datetime).each do |lesson| %>
-         <%= lesson.student.full_name %>
+          <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
+            <%= lesson.student.full_name %>
+          </div>
         <% end %>
-      </div>
+      <% else %>
+        <div class="col-sm-1-schedule text-center element-height lesson-block"></div>
+      <% end %>
     <% end %>
   </div>
   <div class="row-time offset-color">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">4:00</h5></div>
     <% @days_from_this_week.each do |day| %>
-      <div class="col-sm-1-schedule text-center element-height lesson-block">
-        <% datetime = DateTime.new( day.year,  day.month, day.day, 16, 00 )%>
+      <% datetime = DateTime.new( day.year,  day.month, day.day, 16, 00 )%>
+      <% if @user.lessons_at(datetime).exists? %>
         <% @user.lessons_at(datetime).each do |lesson| %>
-         <%= lesson.student.full_name %>
+          <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
+            <%= lesson.student.full_name %>
+          </div>
         <% end %>
-      </div>
+      <% else %>
+        <div class="col-sm-1-schedule text-center element-height lesson-block"></div>
+      <% end %>
     <% end %>
   </div>
   <div class="row-time">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">5:00</h5></div>
     <% @days_from_this_week.each do |day| %>
-      <div class="col-sm-1-schedule text-center element-height lesson-block">
-        <% datetime = DateTime.new( day.year,  day.month, day.day, 17, 00 )%>
+      <% datetime = DateTime.new( day.year,  day.month, day.day, 17, 00 )%>
+      <% if @user.lessons_at(datetime).exists? %>
         <% @user.lessons_at(datetime).each do |lesson| %>
-         <%= lesson.student.full_name %>
+          <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
+            <%= lesson.student.full_name %>
+          </div>
         <% end %>
-      </div>
+      <% else %>
+        <div class="col-sm-1-schedule text-center element-height lesson-block"></div>
+      <% end %>
     <% end %>
   </div>
   <div class="row-time offset-color">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">6:00</h5></div>
     <% @days_from_this_week.each do |day| %>
-      <div class="col-sm-1-schedule text-center element-height lesson-block">
-        <% datetime = DateTime.new( day.year,  day.month, day.day, 18, 00 )%>
+      <% datetime = DateTime.new( day.year,  day.month, day.day, 18, 00 )%>
+      <% if @user.lessons_at(datetime).exists? %>
         <% @user.lessons_at(datetime).each do |lesson| %>
-         <%= lesson.student.full_name %>
+          <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
+            <%= lesson.student.full_name %>
+          </div>
         <% end %>
-      </div>
+      <% else %>
+        <div class="col-sm-1-schedule text-center element-height lesson-block"></div>
+      <% end %>
     <% end %>
   </div>
   <div class="row-time">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">7:00</h5></div>
     <% @days_from_this_week.each do |day| %>
-      <div class="col-sm-1-schedule text-center element-height lesson-block">
-        <% datetime = DateTime.new( day.year,  day.month, day.day, 19, 00 )%>
+      <% datetime = DateTime.new( day.year,  day.month, day.day, 19, 00 )%>
+      <% if @user.lessons_at(datetime).exists? %>
         <% @user.lessons_at(datetime).each do |lesson| %>
-         <%= lesson.student.full_name %>
+          <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
+            <%= lesson.student.full_name %>
+          </div>
         <% end %>
-      </div>
+      <% else %>
+        <div class="col-sm-1-schedule text-center element-height lesson-block"></div>
+      <% end %>
     <% end %>
   </div>
   <div class="row-time offset-color">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">8:00</h5></div>
     <% @days_from_this_week.each do |day| %>
-      <div class="col-sm-1-schedule text-center element-height lesson-block">
-        <% datetime = DateTime.new( day.year,  day.month, day.day, 20, 00 )%>
+      <% datetime = DateTime.new( day.year,  day.month, day.day, 20, 00 )%>
+      <% if @user.lessons_at(datetime).exists? %>
         <% @user.lessons_at(datetime).each do |lesson| %>
-         <%= lesson.student.full_name %>
+          <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
+            <%= lesson.student.full_name %>
+          </div>
         <% end %>
-      </div>
+      <% else %>
+        <div class="col-sm-1-schedule text-center element-height lesson-block"></div>
+      <% end %>
     <% end %>
   </div>
   <div class="row-time">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">9:00</h5></div>
     <% @days_from_this_week.each do |day| %>
-      <div class="col-sm-1-schedule text-center element-height lesson-block">
-        <% datetime = DateTime.new( day.year,  day.month, day.day, 21, 00 )%>
+      <% datetime = DateTime.new( day.year,  day.month, day.day, 21, 00 )%>
+      <% if @user.lessons_at(datetime).exists? %>
         <% @user.lessons_at(datetime).each do |lesson| %>
-         <%= lesson.student.full_name %>
+          <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
+            <%= lesson.student.full_name %>
+          </div>
         <% end %>
-      </div>
+      <% else %>
+        <div class="col-sm-1-schedule text-center element-height lesson-block"></div>
+      <% end %>
     <% end %>
   </div>
   <div class="row-time last-row offset-color">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">10:00</h5></div>
     <% @days_from_this_week.each do |day| %>
-      <div class="col-sm-1-schedule text-center element-height lesson-block">
-        <% datetime = DateTime.new( day.year,  day.month, day.day, 22, 00 )%>
+      <% datetime = DateTime.new( day.year,  day.month, day.day, 22, 00 )%>
+      <% if @user.lessons_at(datetime).exists? %>
         <% @user.lessons_at(datetime).each do |lesson| %>
-         <%= lesson.student.full_name %>
+          <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
+            <%= lesson.student.full_name %>
+          </div>
         <% end %>
-      </div>
+      <% else %>
+        <div class="col-sm-1-schedule text-center element-height lesson-block"></div>
+      <% end %>
     <% end %>
   </div>
   
