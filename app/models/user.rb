@@ -36,7 +36,7 @@ class User < ActiveRecord::Base
   end
   
   def lessons_at(datetime)
-    lessons.where('start_time < ? AND end_time > ?', datetime, datetime)
+    lessons.where('start_time >= ? AND end_time <= ?', datetime, datetime + 1.hour)
   end
   
 end
