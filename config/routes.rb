@@ -8,6 +8,7 @@ NkuProject::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   resources :users   
+  get 'day', to: 'users#day', as: 'day'
   resources :sessions
   resources :students
   resources :lessons

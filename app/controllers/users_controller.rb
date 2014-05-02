@@ -24,6 +24,20 @@ class UsersController < ApplicationController
     end
   end
   
+  def day
+    if params[:day]
+      @viewDate = Date.parse(params[:day])
+    else
+      @viewDate = Date.today  
+    end
+    @user = User.find(session[:user_id])
+    if @user == current_user
+      render :day
+    else
+      redirect_to new_session_path, notice: "You need to login first to view schedules."
+    end
+  end
+  
   def edit
     @user = User.find(params[:id])
     if @user == current_user
@@ -36,6 +50,9 @@ class UsersController < ApplicationController
   def update
     current_user.update_attributes!(user_params)
     redirect_to users_path, notice: "Successfully updated your profile"
+  end
+  
+  def show
   end
 
   private
