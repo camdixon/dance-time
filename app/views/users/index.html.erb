@@ -33,22 +33,22 @@
       <h5 class="bold text-center"><%= link_to (@weekStart).strftime("%A %d"), day_path(day: @weekStart), class: 'block' %></h5>
     </div>
     <div class="col-sm-1-schedule block tuesday">
-      <h5 class="bold text-center"><%= (@weekStart+1.days).strftime("%A %d") %></h5>
+      <h5 class="bold text-center"><%= link_to (@weekStart + 1.days).strftime("%A %d"), day_path(day: @weekStart + 1.days), class: 'block' %></h5>
     </div>
     <div class="col-sm-1-schedule block wednesday">
-      <h5 class="bold text-center"><%= (@weekStart+2.days).strftime("%A %d") %></h5>
+      <h5 class="bold text-center"><%= link_to (@weekStart + 2.days).strftime("%A %d"), day_path(day: @weekStart + 2.days), class: 'block' %></h5>
     </div>
     <div class="col-sm-1-schedule block thursday">
-      <h5 class="bold text-center"><%= (@weekStart+3.days).strftime("%A %d") %></h5>
+      <h5 class="bold text-center"><%= link_to (@weekStart + 3.days).strftime("%A %d"), day_path(day: @weekStart + 3.days), class: 'block' %></h5>
     </div>
     <div class="col-sm-1-schedule block friday">
-      <h5 class="bold text-center"><%= (@weekStart+4.days).strftime("%A %d") %></h5>
+      <h5 class="bold text-center"><%= link_to (@weekStart + 4.days).strftime("%A %d"), day_path(day: @weekStart + 4.days), class: 'block' %></h5>
     </div>
     <div class="col-sm-1-schedule block saturday">
-      <h5 class="bold text-center"><%= (@weekStart+5.days).strftime("%A %d") %></h5>
+      <h5 class="bold text-center"><%= link_to (@weekStart + 5.days).strftime("%A %d"), day_path(day: @weekStart + 5.days), class: 'block' %></h5>
     </div>
     <div class="col-sm-1-schedule block sunday">
-      <h5 class="bold text-center"><%= (@weekStart+6.days).strftime("%A %d") %></h5>
+      <h5 class="bold text-center"><%= link_to (@weekStart + 6.days).strftime("%A %d"), day_path(day: @weekStart + 6.days), class: 'block' %></h5>
     </div>
   </div>
   <div class="row-time offset-color">
