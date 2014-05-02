@@ -30,8 +30,7 @@
       <h5 class="bold text-center"><%= (@weekStart).strftime("%B") %></h5>
     </div>
     <div class="col-sm-1-schedule monday">
-      <% debugger %>
-      <h5 class="bold text-center"><%= link_to (@weekStart).strftime("%A %d"), day_path, class: 'block' %></h5>
+      <h5 class="bold text-center"><%= link_to (@weekStart).strftime("%A %d"), day_path(day: @weekStart), class: 'block' %></h5>
     </div>
     <div class="col-sm-1-schedule block tuesday">
       <h5 class="bold text-center"><%= (@weekStart+1.days).strftime("%A %d") %></h5>
