@@ -29,6 +29,12 @@
     <div class="col-sm-1-schedule first-col">
       <h5 class="bold text-center"><%= (@viewDate).strftime("%A %d") %></h5>
     </div>
+    <% @teachers.each do |teacher| %>
+      <div class="col-sm-1-schedule">
+        <h5 class="bold text-center block"><%= link_to teacher.name, users_path(week: @weekStart) %></h5>
+      </div>
+    <% end %>
+    
     <div class="col-sm-1-schedule">
       <h5 class="bold text-center block"><%= link_to (@teachers.first).name, users_path(week: @weekStart) %></h5>
     </div>
