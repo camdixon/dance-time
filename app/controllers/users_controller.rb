@@ -30,12 +30,15 @@ class UsersController < ApplicationController
     else
       @viewDate = Date.today  
     end
+    @weekStart = @viewDate.beginning_of_week(start_day = :monday)
     @user = User.find(session[:user_id])
     if @user == current_user
       render :day
     else
       redirect_to new_session_path, notice: "You need to login first to view schedules."
     end
+    
+    @teachers = @user.studio.users
   end
   
   def edit

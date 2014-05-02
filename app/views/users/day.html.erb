@@ -21,42 +21,24 @@
 
 <!-- Day Schedule -->
 <div class="row" style="margin-left: 28px; margin-bottom: -12px;">
-  <h3 class="month-arrow"><%= link_to "<", users_path(week: @weekStart - 1.week) %></h3>
-  <h3 class="month-arrow"><%= link_to ">", users_path(week: @weekStart + 1.week) %></h3>
+  <h3 class="month-arrow"><%= link_to "<", day_path(day: @viewDate - 1.day) %></h3>
+  <h3 class="month-arrow"><%= link_to ">", day_path(day: @viewDate + 1.day) %></h3>
 </div>
 <div class="schedule-wrap">
   <div class="row first-row">
     <div class="col-sm-1-schedule first-col">
-      <h5 class="bold text-center"><%= (@weekStart).strftime("%B") %></h5>
+      <h5 class="bold text-center"><%= (@viewDate).strftime("%A %d") %></h5>
     </div>
-    <div class="col-sm-1-schedule monday">
-      <h5 class="bold text-center block"><%= link_to (@weekStart).strftime("%A %d"), users_day_path(day: @weekStart) %></h5>
-    </div>
-    <div class="col-sm-1-schedule block tuesday">
-      <h5 class="bold text-center"><%= (@weekStart+1.days).strftime("%A %d") %></h5>
-    </div>
-    <div class="col-sm-1-schedule block wednesday">
-      <h5 class="bold text-center"><%= (@weekStart+2.days).strftime("%A %d") %></h5>
-    </div>
-    <div class="col-sm-1-schedule block thursday">
-      <h5 class="bold text-center"><%= (@weekStart+3.days).strftime("%A %d") %></h5>
-    </div>
-    <div class="col-sm-1-schedule block friday">
-      <h5 class="bold text-center"><%= (@weekStart+4.days).strftime("%A %d") %></h5>
-    </div>
-    <div class="col-sm-1-schedule block saturday">
-      <h5 class="bold text-center"><%= (@weekStart+5.days).strftime("%A %d") %></h5>
-    </div>
-    <div class="col-sm-1-schedule block sunday">
-      <h5 class="bold text-center"><%= (@weekStart+6.days).strftime("%A %d") %></h5>
+    <div class="col-sm-1-schedule">
+      <h5 class="bold text-center block"><%= link_to (@teachers.first).name, users_path(week: @weekStart) %></h5>
     </div>
   </div>
   <div class="row-time offset-color">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">12:00</h5></div>    
-    <% @days_from_this_week.each do |day| %>
+    <% @teachers.each do |teacher| %>
       <% datetime = DateTime.new( day.year,  day.month, day.day, 12, 00 )%>
-      <% if @user.lessons_at(datetime).exists? %>
-        <% @user.lessons_at(datetime).each do |lesson| %>
+      <% if teacher.lessons_at(datetime).exists? %>
+        <% teacher.lessons_at(datetime).each do |lesson| %>
           <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
             <%= lesson.student.full_name %>
           </div>
@@ -68,153 +50,33 @@
   </div>
   <div class="row-time">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">1:00</h5></div>
-    <% @days_from_this_week.each do |day| %>
-      <% datetime = DateTime.new( day.year,  day.month, day.day, 13, 00 )%>
-      <% if @user.lessons_at(datetime).exists? %>
-        <% @user.lessons_at(datetime).each do |lesson| %>
-          <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
-            <%= lesson.student.full_name %>
-          </div>
-        <% end %>
-      <% else %>
-        <div class="col-sm-1-schedule text-center element-height lesson-block"></div>
-      <% end %>
-    <% end %>
   </div>
   <div class="row-time offset-color">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">2:00</h5></div>
-    <% @days_from_this_week.each do |day| %>
-      <% datetime = DateTime.new( day.year,  day.month, day.day, 14, 00 )%>
-      <% if @user.lessons_at(datetime).exists? %>
-        <% @user.lessons_at(datetime).each do |lesson| %>
-          <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
-            <%= lesson.student.full_name %>
-          </div>
-        <% end %>
-      <% else %>
-        <div class="col-sm-1-schedule text-center element-height lesson-block"></div>
-      <% end %>
-    <% end %>
   </div>
   <div class="row-time">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">3:00</h5></div>
-    <% @days_from_this_week.each do |day| %>
-      <% datetime = DateTime.new( day.year,  day.month, day.day, 15, 00 )%>
-      <% if @user.lessons_at(datetime).exists? %>
-        <% @user.lessons_at(datetime).each do |lesson| %>
-          <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
-            <%= lesson.student.full_name %>
-          </div>
-        <% end %>
-      <% else %>
-        <div class="col-sm-1-schedule text-center element-height lesson-block"></div>
-      <% end %>
-    <% end %>
   </div>
   <div class="row-time offset-color">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">4:00</h5></div>
-    <% @days_from_this_week.each do |day| %>
-      <% datetime = DateTime.new( day.year,  day.month, day.day, 16, 00 )%>
-      <% if @user.lessons_at(datetime).exists? %>
-        <% @user.lessons_at(datetime).each do |lesson| %>
-          <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
-            <%= lesson.student.full_name %>
-          </div>
-        <% end %>
-      <% else %>
-        <div class="col-sm-1-schedule text-center element-height lesson-block"></div>
-      <% end %>
-    <% end %>
   </div>
   <div class="row-time">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">5:00</h5></div>
-    <% @days_from_this_week.each do |day| %>
-      <% datetime = DateTime.new( day.year,  day.month, day.day, 17, 00 )%>
-      <% if @user.lessons_at(datetime).exists? %>
-        <% @user.lessons_at(datetime).each do |lesson| %>
-          <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
-            <%= lesson.student.full_name %>
-          </div>
-        <% end %>
-      <% else %>
-        <div class="col-sm-1-schedule text-center element-height lesson-block"></div>
-      <% end %>
-    <% end %>
   </div>
   <div class="row-time offset-color">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">6:00</h5></div>
-    <% @days_from_this_week.each do |day| %>
-      <% datetime = DateTime.new( day.year,  day.month, day.day, 18, 00 )%>
-      <% if @user.lessons_at(datetime).exists? %>
-        <% @user.lessons_at(datetime).each do |lesson| %>
-          <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
-            <%= lesson.student.full_name %>
-          </div>
-        <% end %>
-      <% else %>
-        <div class="col-sm-1-schedule text-center element-height lesson-block"></div>
-      <% end %>
-    <% end %>
   </div>
   <div class="row-time">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">7:00</h5></div>
-    <% @days_from_this_week.each do |day| %>
-      <% datetime = DateTime.new( day.year,  day.month, day.day, 19, 00 )%>
-      <% if @user.lessons_at(datetime).exists? %>
-        <% @user.lessons_at(datetime).each do |lesson| %>
-          <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
-            <%= lesson.student.full_name %>
-          </div>
-        <% end %>
-      <% else %>
-        <div class="col-sm-1-schedule text-center element-height lesson-block"></div>
-      <% end %>
-    <% end %>
   </div>
   <div class="row-time offset-color">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">8:00</h5></div>
-    <% @days_from_this_week.each do |day| %>
-      <% datetime = DateTime.new( day.year,  day.month, day.day, 20, 00 )%>
-      <% if @user.lessons_at(datetime).exists? %>
-        <% @user.lessons_at(datetime).each do |lesson| %>
-          <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
-            <%= lesson.student.full_name %>
-          </div>
-        <% end %>
-      <% else %>
-        <div class="col-sm-1-schedule text-center element-height lesson-block"></div>
-      <% end %>
-    <% end %>
   </div>
   <div class="row-time">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">9:00</h5></div>
-    <% @days_from_this_week.each do |day| %>
-      <% datetime = DateTime.new( day.year,  day.month, day.day, 21, 00 )%>
-      <% if @user.lessons_at(datetime).exists? %>
-        <% @user.lessons_at(datetime).each do |lesson| %>
-          <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
-            <%= lesson.student.full_name %>
-          </div>
-        <% end %>
-      <% else %>
-        <div class="col-sm-1-schedule text-center element-height lesson-block"></div>
-      <% end %>
-    <% end %>
   </div>
   <div class="row-time last-row offset-color">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">10:00</h5></div>
-    <% @days_from_this_week.each do |day| %>
-      <% datetime = DateTime.new( day.year,  day.month, day.day, 22, 00 )%>
-      <% if @user.lessons_at(datetime).exists? %>
-        <% @user.lessons_at(datetime).each do |lesson| %>
-          <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
-            <%= lesson.student.full_name %>
-          </div>
-        <% end %>
-      <% else %>
-        <div class="col-sm-1-schedule text-center element-height lesson-block"></div>
-      <% end %>
-    <% end %>
   </div>
   
 </div>
