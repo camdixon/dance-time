@@ -9,8 +9,9 @@
       <span><%= link_to 'All Lessons', lessons_path, class: 'btn btn-default pull-right' %></span>
     </div>
     <div class="col-sm-4" style="margin: 0 0 0 40px; clear: left;">
-      <div class="btn-group">  
+      <div class="btn-group">
         <span style="margin-right: 20px"><%= link_to 'Add', 'path_name', class: 'btn btn-default pull-left' %></span>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Modal</button>
         <span style="margin-right: 20px"><%= link_to 'Lesson', new_lesson_path, class: 'btn btn-default pull-left' %></span>
         <span style="margin-right: 20px"><%= link_to 'Meeting', 'path_name', class: 'btn btn-default pull-left' %></span>
         <span style="margin-right: 20px"><%= link_to 'Break', 'path_name', class: 'btn btn-default pull-left' %></span>
@@ -29,11 +30,6 @@
     <div class="col-sm-1-schedule first-col">
       <h5 class="bold text-center"><%= (@viewDate).strftime("%A %d") %></h5>
     </div>
-    <% @teachers.each do |teacher| %>
-      <div class="col-sm-1-schedule">
-        <h5 class="bold text-center block"><%= link_to teacher.name, users_path(week: @weekStart) %></h5>
-      </div>
-    <% end %>
     
     <div class="col-sm-1-schedule">
       <h5 class="bold text-center block"><%= link_to (@teachers.first).name, users_path(week: @weekStart) %></h5>

@@ -17,7 +17,13 @@ class LessonsController < ApplicationController
   def index
     @lessons = Lesson.all
   end
-
+  
+  def new_lesson
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
   
   private
 

@@ -3,6 +3,7 @@ NkuProject::Application.routes.draw do
   get 'login', to: 'sessions#new', as: 'login'
   post 'login', to: 'sessions#create'
   get 'logout', to: 'sessions#destroy', as: 'logout'
+  get "lessons/new_lesson" => 'lessons#new', :as => :new_lesson
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
