@@ -19,10 +19,6 @@ class LessonsController < ApplicationController
   end
   
   def new_lesson
-    respond_to do |format|
-      format.html
-      format.js
-    end
   end
   
   private
