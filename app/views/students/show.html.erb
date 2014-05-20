@@ -34,19 +34,13 @@
 </div>
 
 <div class="row col-sm-8" style="margin-left: 28px; margin-bottom: 20px;">
-  <h4><%= lessons_taken(@student) %> lessons taken</h4>
-  <h4><%= lessons_remain(@student) %> lessons remaining</h4>
+  <h5><%= @student.lessons_remain %> lessons remaining</h5>
+  <h5><%= @student.lessons_taken %> lessons taken</h5>
 </div>
+date, type of lesson, teacher name, show/cancelled/no show, charged
 
-lesson count (past 2 weeks)
-&nbsp;
-active lessons
-&nbsp;
-
-Cancelled lessons
-&nbsp;
-
-coachings
-&nbsp;
-exchange lessons
-&nbsp;
+type of lesson = normal/coaching
+#3276B1 for a booked lesson
+#39B3D7 for a valid lesson
+#F0AD4E for a cancelled lesson
+#D9534F for a no show lesson

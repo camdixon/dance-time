@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140520164112) do
+ActiveRecord::Schema.define(version: 20140520170814) do
 
   create_table "lessons", force: true do |t|
     t.integer  "student_id"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20140520164112) do
     t.integer "studio_id"
     t.integer "lessons_purchased"
     t.integer "lesson_price"
+    t.integer "user_id"
   end
 
   create_table "studios", force: true do |t|

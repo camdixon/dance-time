@@ -22,10 +22,11 @@ class Student < ActiveRecord::Base
     "#{full_name} & #{partner_name}"
   end
   
-  def lessons_taken(student)
-    student.lessons.
+  def lessons_taken
+    5
   end
   
-  def lessons_remain(student)
+  def lessons_remain
+    2
   end
 end
