@@ -24,7 +24,7 @@ class StudentsController < ApplicationController
   
   def show
     @student = Student.find(params[:id])
-    @user = User.find(params[:id])
+    @user = User.find(current_user.id)
     if @user == current_user
       render :show
     else
