@@ -1,0 +1,52 @@
+<div class="page-header">
+  <div class="row">
+    <h2 class="col-sm-4" style="margin-left: 40px">
+      <% if !@student.partner_first_name.blank? %>     
+        <%= @student.both_names %>
+      <% else %>
+        <%= @student.full_name %>
+      <% end %>
+    </h2>
+    <div class="btn-group pull-right" style="margin-right: 100px;">
+      <span><%= link_to 'Logout', 'logout', class: 'btn btn-default pull-right' %></span>
+      <span><%= link_to 'Schedule', users_path, class: 'btn btn-default pull-right' %></span>
+      <span><%= link_to 'Add a Student', new_student_path, class: 'btn btn-default pull-right' %></span>
+      <span><%= link_to 'All Students', students_path, class: 'btn btn-default pull-right' %></span>
+      <span><%= link_to 'All Lessons', lessons_path, class: 'btn btn-default pull-right' %></span>
+    </div>
+  </div>    
+</div>
+
+
+<div class="row col-sm-6" style="margin-left: 28px; margin-bottom: 20px;">
+  <% if !@student.email.blank? %>
+    <h4>Email: <%= @student.email %></h4>
+  <% end %>
+  <% if !@student.partner_email.blank? %>
+  <h4>Partner's Email: <%= @student.partner_email %></h4>
+  <% end %>
+  <% if !@student.cell_phone.blank? %>
+    <h4>Cell: <%= @student.cell_phone %></h4>
+  <% end %>
+  <% if !@student.home_phone.blank? %>
+    <h4>Home: <%= @student.home_phone %></h4>
+  <% end %>
+</div>
+
+<div class="row col-sm-8" style="margin-left: 28px; margin-bottom: 20px;">
+  <h4><%= lessons_taken(@student) %> lessons taken</h4>
+  <h4><%= lessons_remain(@student) %> lessons remaining</h4>
+</div>
+
+lesson count (past 2 weeks)
+&nbsp;
+active lessons
+&nbsp;
+
+Cancelled lessons
+&nbsp;
+
+coachings
+&nbsp;
+exchange lessons
+&nbsp;
