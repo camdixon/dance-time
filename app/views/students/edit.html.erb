@@ -1,6 +1,6 @@
 <div class="page-header">
   <div class="row">
-    <h1 class="col-sm-4" style="margin-left: 40px"><% @student.first_name %></h1>
+    <h2 class="col-sm-4" style="margin-left: 40px"><%= @student.full_name %></h2>
     <div class="btn-group pull-right" style="margin-right: 100px;">
       <span><%= link_to 'Logout', 'logout', class: 'btn btn-default pull-right' %></span>
       <span><%= link_to 'Schedule', users_path, class: 'btn btn-default pull-right' %></span>

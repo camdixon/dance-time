@@ -21,6 +21,16 @@ class StudentsController < ApplicationController
       redirect_to new_session_path, notice: "Please login to edit #{@student.name}'s profile."
     end
   end
+  
+  def show
+    @student = Student.find(params[:id])
+    @user = User.find(params[:id])
+    if @user == current_user
+      render :show
+    else
+      redirect_to new_session_path, notice: "Please login to edit #{@student.name}'s profile."
+    end
+  end
 
   private
 
