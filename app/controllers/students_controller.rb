@@ -13,6 +13,7 @@ class StudentsController < ApplicationController
   end
   
   def edit
+    @student = Student.find(params[:id])
     @user = User.find(params[:id])
     if @user == current_user
       render :edit

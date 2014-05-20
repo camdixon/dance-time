@@ -8,9 +8,9 @@ class LessonsController < ApplicationController
     @current_date = params[:date] || Date.today
 
     if @lesson.save
-      redirect_to users_path, notice: "You scheduled a lesson."
+      
     else
-      render :new
+      render :new_lesson_modal
     end
   end
 
@@ -18,8 +18,15 @@ class LessonsController < ApplicationController
     @lessons = Lesson.all
   end
   
-  def new_lesson
+  def new_lesson_modal
+    @lesson = Lesson.new
   end
+  
+  def destroy
+    Lesson.destroy(params[:id])
+    redirect_to lessons_path
+  end
+
   
   private
 
