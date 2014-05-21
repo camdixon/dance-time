@@ -42,7 +42,7 @@
       <% if teacher.lessons_at(datetime).exists? %>
         <% teacher.lessons_at(datetime).each do |lesson| %>
           <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
-            <%= lesson.student.full_name %>
+            <%= link_to lesson.student.full_name, student_path(lesson.student.id), style: 'color:#000;' %>
           </div>
         <% end %>
       <% else %>
@@ -53,11 +53,11 @@
   <div class="row-time">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">1:00</h5></div>
     <% @teachers.each do |teacher| %>
-      <% datetime = DateTime.new( @viewDate.year,  @viewDate.month, @viewDate.day, 12, 00 )%>
+      <% datetime = DateTime.new( @viewDate.year,  @viewDate.month, @viewDate.day, 13, 00 )%>
       <% if teacher.lessons_at(datetime).exists? %>
         <% teacher.lessons_at(datetime).each do |lesson| %>
           <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
-            <%= lesson.student.full_name %>
+            <%= link_to lesson.student.full_name, student_path(lesson.student.id), style: 'color:#000;' %>
           </div>
         <% end %>
       <% else %>
@@ -68,11 +68,11 @@
   <div class="row-time offset-color">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">2:00</h5></div>
     <% @teachers.each do |teacher| %>
-      <% datetime = DateTime.new( @viewDate.year,  @viewDate.month, @viewDate.day, 12, 00 )%>
+      <% datetime = DateTime.new( @viewDate.year,  @viewDate.month, @viewDate.day, 14, 00 )%>
       <% if teacher.lessons_at(datetime).exists? %>
         <% teacher.lessons_at(datetime).each do |lesson| %>
           <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
-            <%= lesson.student.full_name %>
+            <%= link_to lesson.student.full_name, student_path(lesson.student.id), style: 'color:#000;' %>
           </div>
         <% end %>
       <% else %>
@@ -83,11 +83,11 @@
   <div class="row-time">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">3:00</h5></div>
     <% @teachers.each do |teacher| %>
-      <% datetime = DateTime.new( @viewDate.year,  @viewDate.month, @viewDate.day, 12, 00 )%>
+      <% datetime = DateTime.new( @viewDate.year,  @viewDate.month, @viewDate.day, 15, 00 )%>
       <% if teacher.lessons_at(datetime).exists? %>
         <% teacher.lessons_at(datetime).each do |lesson| %>
           <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
-            <%= lesson.student.full_name %>
+            <%= link_to lesson.student.full_name, student_path(lesson.student.id), style: 'color:#000;' %>
           </div>
         <% end %>
       <% else %>
@@ -98,11 +98,11 @@
   <div class="row-time offset-color">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">4:00</h5></div>
     <% @teachers.each do |teacher| %>
-      <% datetime = DateTime.new( @viewDate.year,  @viewDate.month, @viewDate.day, 12, 00 )%>
+      <% datetime = DateTime.new( @viewDate.year,  @viewDate.month, @viewDate.day, 16, 00 )%>
       <% if teacher.lessons_at(datetime).exists? %>
         <% teacher.lessons_at(datetime).each do |lesson| %>
           <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
-            <%= lesson.student.full_name %>
+            <%= link_to lesson.student.full_name, student_path(lesson.student.id), style: 'color:#000;' %>
           </div>
         <% end %>
       <% else %>
@@ -113,11 +113,11 @@
   <div class="row-time">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">5:00</h5></div>
     <% @teachers.each do |teacher| %>
-      <% datetime = DateTime.new( @viewDate.year,  @viewDate.month, @viewDate.day, 12, 00 )%>
+      <% datetime = DateTime.new( @viewDate.year,  @viewDate.month, @viewDate.day, 17, 00 )%>
       <% if teacher.lessons_at(datetime).exists? %>
         <% teacher.lessons_at(datetime).each do |lesson| %>
           <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
-            <%= lesson.student.full_name %>
+            <%= link_to lesson.student.full_name, student_path(lesson.student.id), style: 'color:#000;' %>
           </div>
         <% end %>
       <% else %>
@@ -128,11 +128,11 @@
   <div class="row-time offset-color">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">6:00</h5></div>
     <% @teachers.each do |teacher| %>
-      <% datetime = DateTime.new( @viewDate.year,  @viewDate.month, @viewDate.day, 12, 00 )%>
+      <% datetime = DateTime.new( @viewDate.year,  @viewDate.month, @viewDate.day, 18, 00 )%>
       <% if teacher.lessons_at(datetime).exists? %>
         <% teacher.lessons_at(datetime).each do |lesson| %>
           <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
-            <%= lesson.student.full_name %>
+            <%= link_to lesson.student.full_name, student_path(lesson.student.id), style: 'color:#000;' %>
           </div>
         <% end %>
       <% else %>
@@ -143,11 +143,11 @@
   <div class="row-time">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">7:00</h5></div>
     <% @teachers.each do |teacher| %>
-      <% datetime = DateTime.new( @viewDate.year,  @viewDate.month, @viewDate.day, 12, 00 )%>
+      <% datetime = DateTime.new( @viewDate.year,  @viewDate.month, @viewDate.day, 19, 00 )%>
       <% if teacher.lessons_at(datetime).exists? %>
         <% teacher.lessons_at(datetime).each do |lesson| %>
           <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
-            <%= lesson.student.full_name %>
+            <%= link_to lesson.student.full_name, student_path(lesson.student.id), style: 'color:#000;' %>
           </div>
         <% end %>
       <% else %>
@@ -158,11 +158,11 @@
   <div class="row-time offset-color">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">8:00</h5></div>
     <% @teachers.each do |teacher| %>
-      <% datetime = DateTime.new( @viewDate.year,  @viewDate.month, @viewDate.day, 12, 00 )%>
+      <% datetime = DateTime.new( @viewDate.year,  @viewDate.month, @viewDate.day, 20, 00 )%>
       <% if teacher.lessons_at(datetime).exists? %>
         <% teacher.lessons_at(datetime).each do |lesson| %>
           <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
-            <%= lesson.student.full_name %>
+            <%= link_to lesson.student.full_name, student_path(lesson.student.id), style: 'color:#000;' %>
           </div>
         <% end %>
       <% else %>
@@ -173,11 +173,11 @@
   <div class="row-time">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">9:00</h5></div>
     <% @teachers.each do |teacher| %>
-      <% datetime = DateTime.new( @viewDate.year,  @viewDate.month, @viewDate.day, 12, 00 )%>
+      <% datetime = DateTime.new( @viewDate.year,  @viewDate.month, @viewDate.day, 21, 00 )%>
       <% if teacher.lessons_at(datetime).exists? %>
         <% teacher.lessons_at(datetime).each do |lesson| %>
           <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
-            <%= lesson.student.full_name %>
+            <%= link_to lesson.student.full_name, student_path(lesson.student.id), style: 'color:#000;' %>
           </div>
         <% end %>
       <% else %>
@@ -188,11 +188,11 @@
   <div class="row-time last-row offset-color">
     <div class="col-sm-1-schedule first-col time-col text-center element-height"><h5 class="bold">10:00</h5></div>
     <% @teachers.each do |teacher| %>
-      <% datetime = DateTime.new( @viewDate.year,  @viewDate.month, @viewDate.day, 12, 00 )%>
+      <% datetime = DateTime.new( @viewDate.year,  @viewDate.month, @viewDate.day, 22, 00 )%>
       <% if teacher.lessons_at(datetime).exists? %>
         <% teacher.lessons_at(datetime).each do |lesson| %>
           <div class="col-sm-1-schedule text-center element-height lesson-block lesson-active">
-            <%= lesson.student.full_name %>
+            <%= link_to lesson.student.full_name, student_path(lesson.student.id), style: 'color:#000;' %>
           </div>
         <% end %>
       <% else %>

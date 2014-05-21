@@ -37,7 +37,31 @@
   <h5><%= @student.lessons_remain %> lessons remaining</h5>
   <h5><%= @student.lessons_taken %> lessons taken</h5>
 </div>
-date, type of lesson, teacher name, show/cancelled/no show, charged
+show/cancelled/no show
+
+<div class="lesson-wrapper">
+  <table class="table assignment-table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Lesson Type</th>
+        <th>Teacher</th>
+        <th>Charged</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @student.lessons.each do |lesson| %>
+        <tr id="<%= dom_id(lesson) %>">
+          <td><%= lesson.start_time.strftime("%m-%d-%Y") %></td>
+          <td>Regular</td>
+          <td>Cameron Dixon</td>
+          <td>Y</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
 type of lesson = normal/coaching
 #3276B1 for a booked lesson

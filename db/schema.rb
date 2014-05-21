@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140520170814) do
+ActiveRecord::Schema.define(version: 20140521195106) do
 
   create_table "lessons", force: true do |t|
     t.integer  "student_id"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20140520170814) do
     t.string   "day"
     t.datetime "start_time"
     t.datetime "end_time"
+    t.boolean  "no_show"
+    t.boolean  "charged"
   end
 
   create_table "students", force: true do |t|
