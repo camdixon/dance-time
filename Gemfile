@@ -15,6 +15,7 @@ gem 'bcrypt'
 group :development, :test do
   gem 'byebug'
   gem 'sqlite3'
+  gem 'pry'
 end
 
 group :test do

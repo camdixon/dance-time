@@ -16,9 +16,9 @@
       <tr>
         <th>Teacher Name</th>
         <th>Student Name</th>
+        <th>Date</th>
         <th>Start Time</th>
         <th>End Time</th>
-        <th>Date</th>
         <th></th>
       </tr>
     </thead>
@@ -28,13 +28,13 @@
           <tr id="<%= dom_id(lesson) %>">
             <td><%= lesson.user.name %></td>
             <td><%= lesson.student.full_name %></td>
+            <td><%= lesson.start_time.strftime("%m-%d-%Y") %></td>
             <td><%= lesson.start_time.strftime("%I:%M %p") %></td>
             <td><%= lesson.end_time.strftime("%I:%M %p") %></td>
-            <td>
-              <%= lesson.start_time.strftime("%m-%d-%Y") %>
-            </td>
-            <td><span><%= link_to 'Destroy', lesson_path(lesson), class: 'btn btn-danger', method: :delete %></span></td>
-            
+            <td><span><%= link_to 'Move', lesson_path(lesson), class: 'btn btn-success', method: :move %></span></td>
+            <td><span><%= link_to 'No Show', lesson_path(lesson), class: 'btn btn-primary', method: :noshow %></span></td>
+            <td><span><%= link_to 'Charge', lesson_path(lesson), class: 'btn btn-warning', method: :charge %></span></td>
+            <td><span><%= link_to 'Delete', lesson_path(lesson), class: 'btn btn-danger', method: :delete %></span></td>
           </tr>
         <% end %>
     </tbody>

@@ -1,6 +1,6 @@
 <div class="page-header" style="margin-left: 40px;">
   <div class="row">
-    <h1 class="col-sm-8">Schedule a Lesson</h1>
+    <h1 class="col-sm-8">Reschedule a Lesson</h1>
     <div class="col-sm-6">
       <span style="margin-right: 20px"><%= link_to 'Main Schedule', users_path, class: 'btn btn-default pull-left' %></span>
     </div>
@@ -12,7 +12,7 @@
     <% if @lesson.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@lesson.errors.count, "error") %> prohibited
-          scheduling your lesson:</h2>
+          rescheduling your lesson:</h2>
         <ul>
         <% @lesson.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
@@ -44,10 +44,8 @@
       <%= radio_button_tag 'lesson_length', '60', false, class: 'radio-btn-spacing' %> 60 mins
     </div>
 
-    <%= f.submit "Schedule Lesson", class: 'btn btn-primary' %>
+  <%= f.submit "Reschedule Lesson", class: 'btn btn-primary' %>
     &nbsp;or
     <%= link_to 'Cancel', users_path %>
   <% end %>
 </div>
-
-
